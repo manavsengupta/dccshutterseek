@@ -4,7 +4,7 @@ DCC ShutterSeek is a Django web application that allows users to search for imag
 
 ## Live Demo
 
-I have hosted it on Google Cloud Platform VM. Simply go to [http://34.171.243.208] and use the website.
+I have hosted it on Google Cloud Platform VM. Simply go to [http://34.171.243.208](http://34.171.243.208) and use the website.
 
 ## Features
 
