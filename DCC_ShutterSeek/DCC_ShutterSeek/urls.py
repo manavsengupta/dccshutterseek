@@ -35,7 +35,7 @@ def search_photos(request):
         params = {
             "query": query,
             "page": 1,
-            "per_page": 10
+            "per_page": 30
         }
         response = requests.get(url, headers=headers, params=params)
         if response.status_code == 200:
@@ -66,7 +66,7 @@ def search_photos_pixabay(request):
             "key": access_key,
             "q": query,
             "image_type": "photo",
-            "per_page": 20,
+            "per_page": 30,
             "page": 1
         }
         response = requests.get(url, params=params)
