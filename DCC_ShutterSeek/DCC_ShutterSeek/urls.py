@@ -60,13 +60,13 @@ def search_photos_pixabay(request):
     query = request.GET.get('query', '')
     photos = []
     if query:
-        access_key = "19589380-1240f8aee6f52bac7ca20f4ef"  # Your Pixabay API key
+        access_key = "19589380-1240f8aee6f52bac7ca20f4ef"
         url = "https://pixabay.com/api/"
         params = {
             "key": access_key,
             "q": query,
             "image_type": "photo",
-            "per_page": 10,
+            "per_page": 20,
             "page": 1
         }
         response = requests.get(url, params=params)
@@ -96,6 +96,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("",index),
     path('search/', search_photos, name='search_photos'),
-    path('search-pixabay/', search_photos_pixabay, name='search_photos_pixabay'),  # Pixabay
+    path('search-pixabay/', search_photos_pixabay, name='search_photos_pixabay'), 
 
 ]

@@ -53,11 +53,11 @@
 	outline-offset: -8px;
 }
 #search-form {
-  display: none; /* Hide the form */
+  display: none; 
 }
 }
 #search-input {
-  display: none; /* Hide the form */
+  display: none; 
 }
 
 #search svg {

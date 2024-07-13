@@ -62,7 +62,6 @@
     
     <br>
     
-    <!-- Search form -->
     <div id="search">
       <svg viewBox="0 0 420 60" xmlns="http://www.w3.org/2000/svg">
         <rect class="bar"/>
@@ -144,7 +143,6 @@
   
   
   
-  <!-- Add this inside your HTML, where you want the loading indicator to appear -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('search-form');
@@ -152,7 +150,7 @@
         const searchInput = document.getElementById('search-input');
         const loadingIndicator = document.getElementById('loading-indicator');
         const apiSelect = document.getElementById('api-select');
-        const delay = 1500; // Delay in milliseconds
+        const delay = 1500; 
         let typingTimer;
 
         const submitForm = () => {
@@ -163,9 +161,9 @@
 
         lookInput.addEventListener('input', () => {
             clearTimeout(typingTimer);
-            loadingIndicator.style.display = 'block'; // Show loading indicator
+            loadingIndicator.style.display = 'block';
             typingTimer = setTimeout(() => {
-                loadingIndicator.style.display = 'none'; // Hide loading indicator
+                loadingIndicator.style.display = 'none'; 
                 submitForm();
             }, delay);
         });
@@ -173,12 +171,11 @@
         lookInput.addEventListener('keydown', (event) => {
             if (event.key === 'Enter') {
                 clearTimeout(typingTimer);
-                loadingIndicator.style.display = 'none'; // Hide loading indicator
+                loadingIndicator.style.display = 'none'; 
                 submitForm();
             }
         });
 
-        // Set initial form action based on default selected value
         form.action = "/search/";
     });
 </script>
@@ -188,7 +185,7 @@
   
       downloadButtons.forEach(button => {
           button.addEventListener('click', function(event) {
-              event.preventDefault(); // Prevent default anchor behavior
+              event.preventDefault(); 
               const imageUrl = button.getAttribute('data-url');
   
               fetch(imageUrl)
@@ -198,7 +195,7 @@
                       const a = document.createElement('a');
                       a.style.display = 'none';
                       a.href = url;
-                      a.download = 'image.jpg'; // You can customize the filename
+                      a.download = 'image.jpg'; 
                       document.body.appendChild(a);
                       a.click();
                       window.URL.revokeObjectURL(url);
